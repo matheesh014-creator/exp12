@@ -10,13 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v3
 
-    - name: Build
-      run: echo "Build successful"
+    - name: Setup Environment
+      run: echo "Environment ready"
 
-    - name: Test
-      run: echo "Tests passed"
+    - name: Compile Java Code
+      run: |
+        echo "Compiling program..."
+        echo "Compilation successful"
+
+    - name: Run Program
+      run: |
+        echo "Running program..."
+        echo "Hello CI/CD Output"
+
+    - name: Run Tests
+      run: |
+        echo "Running tests..."
+        echo "All tests passed"
 
     - name: Deploy
-      run: echo "Deployment done"
+      run: |
+        echo "Application deployed successfully"
